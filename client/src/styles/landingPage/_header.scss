@@ -1,0 +1,139 @@
+@use "../color-font";
+@use "../device";
+
+// for Laptop
+.header-style {
+  z-index: 999;
+  list-style: none;
+  font-family: color-font.$logo;
+  display: flex;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  a {
+    color: color-font.$mainOrange;
+    i {
+      margin-top: 10px;
+    }
+  }
+  .header-inside {
+    padding: 11px;
+    display: flex;
+    .top-title {
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+}
+.top-header {
+  font-size: 30px;
+  font-weight: 400;
+  color: #f37a1f;
+  font-family: "Caveat", cursive;
+}
+
+.header-sidenav {
+  font-family: color-font.$logo;
+  background-color: color-font.$mainDark;
+  color: color-font.$mainOrange;
+  .sidenav {
+    width: 40%;
+    background-color: color-font.$mainOrange;
+    height: 100%;
+    .nav-list-wrapper {
+      margin-top: 42px;
+      height: 60%;
+      justify-content: space-between;
+      display: flex;
+      flex-direction: column;
+      .nav-list {
+        .white-text {
+          color: white;
+        }
+      }
+      a {
+        font-size: 34px;
+        font-weight: lighter;
+        margin-left: 51px;
+        padding: 0;
+      }
+      img {
+        width: 18.21px;
+        margin-left: 86%;
+      }
+    }  
+  }
+  
+  li:hover {
+    background-color: color-font.$mainDark;
+    opacity: 0.8;
+
+  }
+
+  .nav-list:hover {
+    cursor: pointer;
+
+    a {
+      color: #DCD5CF;
+    }
+  }
+  .close-icon:hover {
+    a {
+      background-color: color-font.$mainOrange;
+    }
+  }
+}
+
+.selected {
+  a {
+    color: color-font.$mainDark;
+  }
+}
+
+@media (max-width: 769px) {
+  .header-style {
+    color: color-font.$mainOrange;
+    background-color: color-font.$mainDark;
+    display: block;
+    position: sticky;
+    // z-index: 999;
+    top: 0;
+    left: 0;
+    height: 64px;
+    .header-inside {
+      a {
+        color: color-font.$mainOrange;
+      }
+    }
+  }
+  .header-sidenav {
+    .sidenav {
+      width: 60%;
+    }
+  }
+}
+
+@media (max-width: device.$ourMobile) {
+  .header-sidenav {
+    .sidenav {
+      .nav-list-wrapper{
+        a {
+          font-size: 22px;    
+        }     
+      }
+    }
+  }
+}
+
+@media (max-width: device.$ourMobileSS) {
+  .header-sidenav {
+    .sidenav {
+      .nav-list-wrapper{
+        img {
+          width: 0px;        
+        }
+      }
+    }
+  }
+}

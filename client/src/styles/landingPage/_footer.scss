@@ -1,0 +1,190 @@
+@use "../color-font";
+@use "../device";
+
+.footer-pageStyle {
+	background: color-font.$mainOrange;
+	color: color-font.$mainDark;
+	text-align: center;
+	height: 100%;
+	width: 100%;
+    .row {
+			width: 590px;
+			margin-bottom: 0 !important;
+			padding-bottom: 50px;
+    }
+    p {
+			font-size: 20px;
+    }
+    .thxMsg {
+			font-size: 40px;
+    }
+    .larry-pic {
+			margin: 140px 0 53px;
+			border-radius: 50%;
+			width: 126px;
+			filter: drop-shadow(3px 3px 3px #CD671B);
+    }
+    input[type="text"] {
+			border-bottom: 3px solid color-font.$mainDark !important;
+			color: color-font.$mainDark !important;
+			text-align: center;
+			font-size: 21px !important;
+			&:focus {
+				outline: none;
+			}
+			&::placeholder {
+				opacity: 50%;
+				color: color-font.$mainDark !important;
+				font-family: color-font.$bodyFont;
+				font-size: 21px;
+			}
+    }
+    input:-webkit-autofill {
+			-webkit-box-shadow: 0 0 0px 1000px color-font.$mainOrange inset !important;
+    }
+    .send-button {
+			margin-left: -30px;
+			cursor: pointer;
+			width: 1.3em;
+			&:focus {
+				outline: none;
+			}
+    }
+    .info {
+			margin: 32px 0;
+			letter-spacing: 0.1em;
+    }
+    .icon{
+			width: 56px;
+			filter: drop-shadow(3px 3px 3px #CD671B);
+    }
+    .fb-icon {
+			margin-right: 22px;
+    }
+    .logo-white {
+			color: color-font.$subWhite;
+			font-size: 46px;
+    }
+}
+
+// desk top device (1366px <)
+@media (max-width: device.$ourLaptopXL) {
+	.footer-pageStyle {
+		.larry-pic {
+			margin: 140px 0 30px;
+		}
+		.info {
+			margin: 30px 0 50px;
+		}
+	}
+}
+
+// tablet device (1024px <)
+@media (max-width: device.$ourTabletL) {
+	.footer-pageStyle {
+		.row {
+			width: 536px;
+			padding-bottom: 50px;
+			.larry-pic {
+				width: 109px;
+				margin: 140px 0 50px;
+			}
+			p {
+				font-size: 18px;
+			}
+			.thxMsg {
+				font-size: 40px;
+			}
+			.logo-white {
+				font-size: 41px;
+			}
+			input[type="text"] {
+				font-size: 19px !important;
+				&::placeholder {
+					font-size: 19px;
+				}
+			}
+			.info {
+				margin: 35px 0;
+			}
+			.icon {
+				width: 44px;
+			}
+		}
+	}
+}
+
+	// tablet device (770px <)
+	@media (max-width: device.$ourTablet) {
+		.footer-pageStyle {
+			.row {
+				width: 273px;
+				padding-bottom: 140px;
+				.larry-pic {
+					width: 102px;
+				}
+				p {
+					font-size: 14px;
+				}
+				.thxMsg {
+					font-size: 20px;
+				}
+				.logo-white {
+					font-size: 32px;
+				}
+				input[type="text"] {
+					font-size: 15px !important;
+					&::placeholder {
+						font-size: 15px;
+					}
+				}
+				.info {
+					margin: 40px 0;
+				}
+				.icon{
+					width: 54px;
+				}
+				.fb-icon {
+					margin-right: 27px;
+				}
+			}
+		}
+}
+
+// mobile device (414px <)
+@media (max-width: device.$ourMobile) {
+	.footer-pageStyle {
+		.row {
+			.logo-white {
+				font-size: 41px;
+			}
+			.icon {
+				width: 44px;
+			}
+			.fb-icon {
+				margin-right: 27px;
+			}
+		}
+	}
+}
+
+// mobile device (< 375px)
+@media (max-width: device.$ourMobileSS) {
+	.footer-pageStyle {
+		.row {
+			width: 200px;
+			.larry-pic {
+				width: 85px;
+				margin: 100px 0 30px; 
+			}
+			.icon {
+				margin-bottom: 113px;
+			}
+			.fb-icon {
+				margin-right: 20px;
+			}
+		}
+	}
+}
+
+        

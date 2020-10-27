@@ -1,0 +1,337 @@
+@use "./color-font";
+@use "../device";
+
+//mobile SS (<375)
+#book-cover {
+  background: color-font.$mainDark;
+  height: 100vh;
+  .about-upperOrange {
+    margin-top: 0 !important;
+    height: 50%;
+    background: color-font.$mainOrange;
+  }
+  .img-wrapper {
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    top: 100vh;
+    overflow: hidden;
+    .half-circles-wrapper {
+      width: 100%;
+      position: relative;
+      top: 73%;
+      display: flex;
+      justify-content: space-evenly;
+      .half-circles {
+        width: 60px;
+        margin-top: -25px;
+      }
+
+      .bookcover {
+        width: 268px;
+        height: 208px;
+        margin: -160px 30px;
+        z-index: 1;
+      }
+    }
+    .cover-line {
+      width: 268px;
+      position: relative;
+      top: calc(73% + 25px);
+      margin: 5px auto;
+      border-bottom: 2px solid color-font.$mainOrange;
+      border-top: none;
+    }
+  }
+  .cover-text {
+    width: 268px;
+    margin: 70px auto 0px;
+    text-align: justify;
+    font-size: 13px;
+    color: color-font.$mainOrange;
+    line-height: 120%;
+    z-index: 1;
+  }
+  .cover-button {
+    width: 100%;
+    text-align: center;
+    .cover-readmore {
+      width: 170px;
+      margin: 0 0 0 auto;
+
+      a {
+        display: flex;
+        text-decoration: none;
+        color: color-font.$mainOrange;
+
+        .readmore-img {
+          width: 29.5px;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
+.buy-button {
+  z-index: 999 !important;
+  background-color: color-font.$subWhite;
+  border-radius: 20px;
+  color: color-font.$mainOrange;
+  border: 0;
+  width: 30%;
+  height: 30px;
+  margin: 0 auto;
+  font-weight: 100;
+  font-size: 100% !important;
+  font-family: "Ramaraja", serif !important;
+  &:hover {
+    background-color: color-font.$mainOrange;
+    color: color-font.$subWhite;
+    cursor: pointer;
+  }
+}
+// mobile device (414px <)
+@media screen and (min-width: device.$ourMobile) {
+  #book-cover {
+    .img-wrapper {
+      position: absolute;
+      top: calc(100vh + 10px);
+    }
+  }
+}
+// tablet (770px <)
+@media screen and (min-width: device.$ourTablet) {
+  .img-wrapper {
+    .half-circles-wrapper {
+      width: 100%;
+      position: relative;
+      top: 70% !important;
+      .half-circles {
+        width: 100px !important;
+        margin-top: -50px !important;
+      }
+
+      .bookcover {
+        width: 431px !important;
+        height: 335px !important;
+        // margin: -150px 30px !important;
+      }
+    }
+    .cover-line {
+      width: 431px !important;
+      position: relative;
+      top: calc(70% + 145px) !important;
+      margin: 5px auto;
+      border-bottom: 2px solid color-font.$mainOrange !important;
+      border-top: none;
+    }
+  }
+  .cover-text {
+    width: 475px !important;
+    position: relative;
+    top: -380px;
+    text-align: justify;
+    font-size: 14px !important;
+    color: color-font.$mainDark !important;
+
+    line-height: 140% !important;
+  }
+  .cover-button {
+    text-align: center;
+    .cover-readmore {
+      width: 270px !important;
+      margin: 50px 0 0 auto !important;
+    }
+    .buy-button {
+      background-color: color-font.$subWhite;
+      border-radius: 20px;
+      color: color-font.$mainOrange;
+      border: 0;
+      width: 196px !important;
+      height: 43px !important;
+      margin: 0 auto;
+      font-weight: 100;
+      font-size: 100% !important;
+      font-family: "Ramaraja", serif !important;
+      &:hover {
+        background-color: color-font.$mainOrange;
+        color: color-font.$subWhite;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+// tablet - desktop(1024px <)
+@media screen and (min-width: device.$ourTabletL) {
+  .img-wrapper {
+    .half-circles-wrapper {
+      // top: 70% !important;
+      .half-circles {
+        width: 138px !important;
+        margin-top: -50px !important;
+      }
+
+      .bookcover {
+        width: 431px !important;
+        height: 335px !important;
+        margin: -240px 0 !important;
+      }
+    }
+    .cover-line {
+      width: 550px !important;
+      position: relative;
+      top: calc(70% + 40px) !important;
+      margin: 5px auto;
+      border-bottom: 2px solid color-font.$mainOrange;
+      border-top: none;
+    }
+  }
+  .cover-text {
+    width: 475px !important;
+    position: static !important;
+    color: color-font.$mainOrange !important;
+
+    line-height: 140% !important;
+    margin: 150px auto 0px !important;
+  }
+  .cover-button {
+    text-align: center;
+    .cover-readmore {
+      width: 370px !important;
+      margin: 0 0 0 auto !important;
+    }
+    .buy-button {
+      background-color: color-font.$subWhite;
+      border-radius: 20px;
+      color: color-font.$mainOrange;
+      border: 0;
+      width: 196px !important;
+      height: 43px !important;
+      margin: 0 auto;
+      font-weight: 100;
+      font-size: 100% !important;
+      font-family: "Ramaraja", serif !important;
+      &:hover {
+        background-color: color-font.$mainOrange;
+        color: color-font.$subWhite;
+        cursor: pointer;
+      }
+    }
+  }
+}
+@media screen and (min-width: device.$ourLaptopXL) {
+  .img-wrapper {
+    .half-circles-wrapper {
+      .half-circles {
+        width: 152px !important;
+        margin-top: -70px !important;
+      }
+
+      .bookcover {
+        width: 552px !important;
+        height: 406px !important;
+        margin: -290px -100px !important;
+      }
+    }
+    .cover-line {
+      // z-index: 2 !important;
+      width: 650px !important;
+      position: relative;
+      top: calc(80% + 35px) !important;
+      margin: 5px auto;
+      border-bottom: 2px solid color-font.$mainOrange !important;
+      border-top: none;
+    }
+  }
+  .cover-text {
+    width: 575px !important;
+    position: static !important;
+    color: color-font.$mainOrange !important;
+
+    line-height: 140% !important;
+    margin: 200px auto 0px !important;
+  }
+  .cover-button {
+    text-align: center;
+    .cover-readmore {
+      width: 370px !important;
+      margin: 0 0 0 auto !important;
+    }
+    .buy-button {
+      background-color: color-font.$subWhite;
+      border-radius: 20px;
+      color: color-font.$mainOrange;
+      border: 0;
+      width: 196px !important;
+      height: 43px !important;
+      margin: 0 auto;
+      font-weight: 100;
+      font-size: 100% !important;
+      font-family: "Ramaraja", serif !important;
+      &:hover {
+        background-color: color-font.$mainOrange;
+        color: color-font.$subWhite;
+        cursor: pointer;
+      }
+    }
+  }
+}
+@media screen and (min-width: device.$ourLaptopXXL) {
+  .img-wrapper {
+    .half-circles-wrapper {
+      .half-circles {
+        width: 152px !important;
+        margin-top: -70px !important;
+      }
+
+      .bookcover {
+        width: 552px !important;
+        height: 406px !important;
+        margin: -300px -350px !important;
+      }
+    }
+    .cover-line {
+      // z-index: 2 !important;
+      width: 650px !important;
+      position: relative;
+      top: 630px !important;
+      margin: 5px auto;
+      border-bottom: 2px solid color-font.$mainOrange !important;
+      border-top: none;
+    }
+  }
+  .cover-text {
+    width: 575px !important;
+    position: static !important;
+    color: color-font.$mainOrange !important;
+    font-size: 16px !important;
+
+    line-height: 140% !important;
+    margin: 200px auto 0px !important;
+  }
+  .cover-button {
+    text-align: center;
+    .cover-readmore {
+      width: 750px !important;
+      margin: 0 0 0 auto !important;
+    }
+    .buy-button {
+      background-color: color-font.$subWhite;
+      border-radius: 20px;
+      color: color-font.$mainOrange;
+      border: 0;
+      width: 196px !important;
+      height: 43px !important;
+      margin: 0 auto;
+      font-weight: 100;
+      font-size: 100% !important;
+      font-family: "Ramaraja", serif !important;
+      &:hover {
+        background-color: color-font.$mainOrange;
+        color: color-font.$subWhite;
+        cursor: pointer;
+      }
+    }
+  }
+}

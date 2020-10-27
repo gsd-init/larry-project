@@ -1,0 +1,307 @@
+@use "./color-font";
+@use "../device";
+
+/* (1920x1080) Full HD Display */
+#book-cover {
+  padding-bottom: 4rem !important;
+  // background: linear-gradient(180deg, color-font.$mainOrange 50%, color-font.$mainDark 50%);
+  background: color-font.$mainDark;
+  height: 100vh;
+  .about-upperOrange{
+    margin-top: 0 !important;
+    height: 50%;
+    background: color-font.$mainOrange
+  }
+}
+
+.half-circles {
+  width: 70%;
+  z-index: 1;
+  position: absolute;
+  top:calc(100vh + 43%);
+  left: 15%;
+
+}
+
+.bookcover {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -17%;
+  display: block;
+  box-shadow: 5px 10px 18px black;
+  z-index: 2;
+};
+
+.cover-line {
+  margin-left: 23%;
+  margin-right: 23%;
+  margin-bottom: 2%;
+  border-bottom: 2px solid color-font.$mainOrange;
+  margin-top: 1%;
+  border-top: none;
+};
+
+.cover-text {
+  text-align: justify;
+  margin-left: 30%;
+  margin-right: 30%;
+  font-size: 17px;
+  color: color-font.$mainOrange;
+  margin-bottom: 1%;
+  margin-top: -1%;
+  line-height: 120%;
+};
+
+.cover-readmore{
+#facebookText{
+  text-align: justify;
+  margin-left: 30%;
+  margin-right: 30%;
+  color: color-font.$mainOrange;
+  margin-bottom: 1%;
+  margin-top: -1%;
+  line-height: 120%;
+  text-align: right;
+}
+img{
+  width:30px
+}
+}
+
+.buy-button {
+  background-color: color-font.$subWhite;
+  border-radius: 20px;
+  color: color-font.$mainOrange;
+  border: 0;
+  width: 12%;
+  height: 40px;
+  position: relative;
+  left: 45%;
+  padding: 0% !important;
+  font-weight: 100;
+  font-size: 140% !important;
+  font-family: "Ramaraja", serif !important;
+  &:hover {
+    background-color: color-font.$mainOrange;
+    color: color-font.$subWhite;
+    cursor: pointer;
+  }
+};
+
+/* (1366x768) WXGA Display */
+@media  screen and (max-width: 1366px) {
+   
+}
+
+/* (1024x768) Landscape */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  #book-cover {
+    // padding-bottom: 7rem !important;
+  }
+  .half-circles {
+    top: calc(100vh + 50%);
+  }
+  // .bookcover{
+  //   margin-top: 15% !important ;
+  // }
+  .cover-text{
+    margin-bottom: 2%!important;
+  }
+  .buy-button{
+    font-size: 14px!important;
+    height: 30px;
+    width: 14%;
+  }
+  
+}
+// 768 ~ 1011 
+@media screen and (max-device-width: 1011px) and (min-device-width: 768px)  {
+  .half-circles {
+    top: calc(100vh + 41%);
+  }
+  
+}
+
+/* (768x1024) Portrait */
+@media screen and (max-device-width: 770px) and (max-device-width: 1024px) and (orientation: portrait) {
+  #book-cover {
+    // padding-bottom: 18rem !important;
+  }
+  .half-circles {
+    top: calc(100vh + 50%);
+    width: 95%;
+    left: 3%;
+    overflow: hidden;
+  }
+  .bookcover{
+    // margin-top: 38% !important ;
+    // width: 60%;
+  }
+  .cover-line {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 4%;
+    border-bottom: 2px solid color-font.$mainOrange;
+    margin-top: 5%;
+    border-top: none;
+  };
+  .cover-text{
+    margin-bottom: 2%!important;
+    position: absolute;
+    top:calc(100vh + 16%);
+    margin-left: 20%;
+    margin-right: 20%;
+    color: color-font.$mainDark; 
+  }
+  #facebookText{
+    position: relative;
+    color: color-font.$mainOrange;
+  }
+  .buy-button{
+    font-size: 14px!important;
+    height: 30px;
+    width: 25%;
+    height: 40px;
+    position: relative;
+    left: 40%;
+    padding: 0% !important;
+    font-weight: 100;
+    font-size: 140% !important;
+  }
+}
+
+/* (414x896) */
+@media only screen and (max-device-width: 415px) and (min-device-width: 376px) {
+  #book-cover {
+    // padding-bottoms: 16rem !important;
+  }
+  .half-circles {
+    width: 110%;
+    z-index: 1;
+    position: absolute;
+    top:calc(100vh + 50%);
+    left: -5%;
+    overflow: hidden;
+    &:hover{
+      animation: none !important;
+    }
+  }
+  .bookcover{
+    margin-top: -30% !important ;
+    width: 60%;
+  }
+  .cover-line {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 5%;
+    border-bottom: 2px solid color-font.$mainOrange;
+    margin-top: 5%;
+    border-top: none;
+  };
+  .cover-text {
+    text-align: justify;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: 12px;
+    color: color-font.$mainOrange;
+    margin-bottom: 1%;
+    margin-top:  440px;
+    line-height: 140%;
+  };
+  .buy-button {
+    background-color: color-font.$subWhite;
+    border-radius: 20px;
+    color: color-font.$mainOrange;
+    border: 0;
+    width: 30%;
+    height: 30px;
+    position: relative;
+    left: 35%;
+    padding: 0% !important;
+    font-weight: 100;
+    font-size: 100% !important;
+    font-family: "Ramaraja", serif !important;
+    &:hover {
+      background-color: color-font.$mainOrange;
+      color: color-font.$subWhite;
+      cursor: pointer;
+    }
+  };
+  #facebookText{
+    // text-align: justify;
+    // margin-left: 30%;
+    margin-right: 20%;
+    // color: color-font.$mainOrange;
+    // margin-bottom: 1%;
+    margin-top: 130px;
+    line-height: 120%;
+    text-align: right;
+  }
+
+}
+
+/* (375x667) */
+@media only screen and (max-device-width: 375px) {
+  #book-cover {
+    // padding-bottom: 7rem !important;
+  }
+  .half-circles {
+    width: 112%;
+    z-index: 1;
+    position: absolute;
+    top:calc(100vh + 40%);
+    left: -7%;
+    overflow: hidden;
+    &:hover{
+      animation: none !important;
+    }
+  }
+  .bookcover{
+    margin-top: -40% !important ;
+    width: 65%;
+  }
+  .cover-line {
+    margin-left: 17%;
+    margin-right: 17%;
+    margin-bottom: 5%;
+    border-bottom: 2px solid color-font.$mainOrange;
+    margin-top: 5%;
+    border-top: none;
+  };
+  .cover-text {
+    text-align: justify;
+    margin-left: 19%;
+    margin-right: 19%;
+    font-size: 12px;
+    color: color-font.$mainOrange;
+    margin-bottom: 2%;
+    margin-top: 75%;
+    line-height: 140%;
+  };
+  .buy-button {
+    background-color: color-font.$subWhite;
+    border-radius: 20px;
+    color: color-font.$mainOrange;
+    border: 0;
+    width: 30%;
+    height: 30px;
+    position: relative;
+    left: 35%;
+    padding: 0% !important;
+    font-weight: 100;
+    font-size: 100% !important;
+    font-family: "Ramaraja", serif !important;
+    &:hover {
+      background-color: color-font.$mainOrange;
+      color: color-font.$subWhite;
+      cursor: pointer;
+    }
+  };
+  #facebookText{
+    margin-right: 20%;
+    margin-top: 130px;
+    line-height: 120%;
+    text-align: right;
+  }
+}

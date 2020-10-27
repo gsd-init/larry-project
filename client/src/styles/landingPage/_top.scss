@@ -1,0 +1,320 @@
+@use "./color-font";
+@use "../device";
+
+// for mobile device
+
+.top-pageStyle {
+  .top-container {
+    width: 100%;
+    height: calc(100vh - 60px);
+    .top-left {
+      width: 100%;
+      height: 50%;
+      background-color: color-font.$mainOrange;
+      .text {
+        position: absolute;
+        top: 17%;
+        width: 100%;
+        text-align: center;
+        h1 {
+          font-size: 39px;
+          letter-spacing: 1.95pt;
+          margin: 0;
+        }
+        h5 {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .top-right {
+      width: 100%;
+      height: 50%;
+      background-color: color-font.$mainDark;
+
+      .top-img {
+        position: absolute;
+        top: 40%;
+        width: 100%;
+        text-align: center;
+        img {
+          width: 221.41px;
+        }
+        img:hover {
+          animation: shake 0.5s;
+          animation-iteration-count: infinite;
+        }
+      }
+      .hidden-mob {
+        img {
+          width: 0;
+        }
+      }
+      .hidden-tab {
+        position: absolute;
+        top: 70.7%;
+        width: 100%;
+        text-align: center;
+        img {
+          width: 179px;
+        }
+      }
+      .top-icon-box {
+        position: absolute;
+        top: 80%;
+        width: 100%;
+        text-align: center;
+
+        img {
+          width: 44.24px;
+          margin: 15px 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: device.$ourMobile) {
+  .top-pageStyle {
+    .top-container {
+      height: calc(100vh - 50px);
+      .top-right {
+        .top-img {
+          position: absolute;
+          top: 40%;
+          width: 100%;
+          text-align: center;
+          img {
+            width: 221.41px;
+          }
+        }
+        .hidden-tab {
+          position: absolute;
+          top: 70.7%;
+          width: 100%;
+          text-align: center;
+          img {
+            width: 221px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: device.$ourTablet) {
+  .top-pageStyle {
+    .top-container {
+      height: 100vh;
+      .top-left {
+        .text {
+          position: absolute;
+          top: 20%;
+          .h1-flex {
+            display: flex;
+            justify-content: center;
+            h1 {
+              font-size: 54px;
+              letter-spacing: 2.7pt;
+              margin: 0;
+              line-height: 62px;
+            }
+            h5 {
+              font-size: 22px;
+              letter-spacing: 1.1pt;
+            }
+          }
+        }
+      }
+
+      .top-right {
+        .top-img {
+          position: absolute;
+          top: 40%;
+          img {
+            width: 313.21px;
+          }
+        }
+        .hidden-mob {
+          text-align: center;
+          width: 50%;
+          img {
+            width: 97.77px;
+            position: absolute;
+            top: 33px;
+            right: 31px;
+          }
+        }
+        .hidden-tab {
+          img {
+           display: none;
+          }
+        }
+        .top-icon-box {
+          position: absolute;
+          top: 90%;
+          text-align: right;
+          right: 31px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: device.$ourTabletL) { 
+  .top-pageStyle {
+    .top-container {
+      display: flex;
+      .top-left {
+        width: 65%;
+        height: 100%;
+        .text {
+          position: relative;
+          top: 50%;
+          .h1-flex {
+            display: flex;
+            justify-content: center;
+            h1 {
+              font-size: 47px;
+              letter-spacing: 2.35pt;
+            }
+            h5 {
+              font-size: 19px;
+              letter-spacing: 0.95pt;
+            }
+          }
+        }
+      }
+
+      .top-right {
+        width: 35%;
+        height: 100%;
+        .top-center-box{
+          height: 100%;
+        }
+        .top-img {
+          position: relative;
+          margin-top: -20%;
+          top: 50%;
+          width: 100%;
+          text-align: center;
+          img {
+            width: 76.3%;
+          }
+        }
+        .hidden-mob {
+          text-align: center;
+          width: 100%;
+          img {
+            width: 132.17px;
+            position: absolute;
+            top: 33px;
+            right: 31px;
+          }
+        }
+        .hidden-tab {
+          width: 0%;
+          img {
+            width: 0%;
+          }
+        }
+        .top-icon-box {
+          width: 100%;
+          height: 10%;
+          position: absolute;
+          top: 90%;
+          right: 31px;
+          text-align: right;
+          img {
+            width: 44.24px;
+            margin: 15px 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: device.$ourLaptopXL) {
+  .top-pageStyle {
+    .top-container {
+      .top-left {
+        
+        .text {
+          h1 {
+            font-size: 66px;
+            letter-spacing: 3.3pt;
+            margin: 0;
+            line-height: 92px;
+          }
+          h5 {
+            font-size: 22px;
+            letter-spacing: 1.1pt;
+          }
+        }
+      }
+
+      .top-right {
+        .top-img {
+          img {
+            width: 76.3%;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: device.$ourLaptopXXL) {
+  .top-pageStyle {
+    .top-container {
+      .top-left {
+        .text {
+          h1 {
+            font-size: 66px;
+            letter-spacing: 3.3pt;
+            line-height: 92px;
+          }
+          h5 {
+            font-size: 22px;
+            letter-spacing: 1.1pt;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}

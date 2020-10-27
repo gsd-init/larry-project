@@ -1,0 +1,44 @@
+@use "./color-font";
+
+// home page
+@use "./homePage/hp-header";
+@use "./homePage/hp-home";
+@use "./homePage/hp-about";
+@use "./homePage/hp-news";
+@use "./homePage/hp-bookAndPub";
+@use "./homePage/hp-comments";
+@use "./homePage/hp-footer";
+
+//book landing page
+@use "./landingPage/header";
+@use "./landingPage/top";
+@use "./landingPage/book-trailer";
+@use "./landingPage/footer";
+@use "./landingPage/bookcover";
+
+//global style
+
+// color
+.mainOrange {
+  color: color-font.$mainOrange;
+}
+.mainDark {
+  color: color-font.$mainDark;
+}
+.subWhite {
+  color: color-font.$subWhite;
+}
+.subBlue {
+  color: color-font.$subBlue;
+}
+.subGray {
+  color: color-font.$subGray;
+}
+
+//font
+.logo {
+  font-family: color-font.$logo;
+}
+body {
+  font-family: color-font.$bodyFont;
+}

@@ -1,0 +1,28 @@
+@use "./color-font";
+@use "../device";
+
+.trailer {
+  height: 100vh;
+  background-color: color-font.$mainDark;
+}
+
+.video-duration {
+  font-size: 12px !important;
+  font-weight: bold !important;
+  font-family: color-font.$bodyFont;
+  color: color-font.$mainOrange;
+}
+
+button:focus {
+  outline: none;
+  background-color: transparent !important;
+}
+
+.MuiGrid-container{
+  height:310px ;
+}
+
+.MuiSlider-root{
+  padding:0;
+}
+
